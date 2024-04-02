@@ -1,23 +1,30 @@
-﻿namespace Aulas.Models
-{
-    public class Cursos
-    {
+﻿using System.ComponentModel.DataAnnotations;
 
-        public Cursos()
-        {
-            ListaUCs = new HashSet<UnidadesCurriculares>();
-            ListaAlunos = new HashSet<Alunos>();
-        }
-        public int Id { get; set; }
+namespace Aulas.Models {
+   public class Cursos {
 
-        public string Nome { get; set; }
 
-        public string Logotipo { get; set; }
+      public Cursos() {
+         ListaUCs = new HashSet<UnidadesCurriculares>();
+         ListaAlunos = new HashSet<Alunos>();
+      }
 
-        //Relacionamento do tipo 1-N com as unidades curriculares
-        public ICollection<UnidadesCurriculares> ListaUCs { get; set; }
+      [Key]  // PK
+      public int Id { get; set; }
 
-        //Relacionamento do tipo 1-N com os alunos
-        public ICollection<Alunos> ListaAlunos { get; set; }
-    }
+      public string Nome { get; set; }
+
+      public string Logotipo { get; set; }
+
+      /* ************************************************
+       * Vamos criar as Relações (FKs) com outras tabelas
+       * *********************************************** */
+
+      // relacionamento com as Unidades Curriculares
+      public ICollection<UnidadesCurriculares> ListaUCs { get; set; }
+      
+      // relacionamento com os Alunos
+      public ICollection<Alunos> ListaAlunos { get; set; }
+
+   }
 }

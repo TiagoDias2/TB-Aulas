@@ -1,2 +1,2 @@
-# TB-Aulas
-aplicação para efetuar em aulas de um curso
+# tB-Aulas
+aplicação para efetuar o registo em aulas de um curso
