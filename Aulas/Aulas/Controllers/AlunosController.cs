@@ -81,7 +81,13 @@ namespace Aulas.Controllers
                 }
                 catch (Exception)
                 {
-
+                    //se cheguei aqui é pq aconteceu um problema
+                    //critico.tem de ser tratado
+                    // -devolver o controlo ao utilizador
+                    // - coriigir o erro
+                    // -escrever os dados do erro LOG 
+                    // - escrever os dados do erro numa tabela da BD 
+                    // - etc.
                     throw;
                 }
 
